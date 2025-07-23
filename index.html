@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>OSINT CHEATS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="login-container">
+    <div id="loginForm">
+      <h2>Login</h2>
+      <form onsubmit="login(event)">
+        <div class="form-group">
+          <label for="login-username">Username</label>
+          <input id="login-username" type="text" placeholder="Enter username" required />
+        </div>
+
+        <div class="form-group">
+          <label for="login-password">Password</label>
+          <input id="login-password" type="password" placeholder="Enter password" required />
+        </div>
+
+        <button onclick="login()">Login</button>
+
+      </form>
+    </div>
+
+    <script>
+
+function login(event) {
+  event.preventDefault();
+
+  const user = document.getElementById("login-username").value;
+  const pass = document.getElementById("login-password").value;
+
+  if (user === "admin" && pass === "admin123")
+   {
+    window.location.href = "KeyOSINT.html";
+  } else {
+    alert("Wrong username or password!");
+  }
+}
+
+
+    </script>
+</body>
+</html>
